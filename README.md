@@ -9,7 +9,7 @@ mAP_auto_test/
 ├── map_test.sh                 ← Step 1: Start the testing process
 ├── update_config.py            ← Step 2: Update config.yml
 ├── config.yml
-├── nvof_test.cpp               ← Step 3: Execute and generate bbox_predic.txt
+├── deepstream_test_app.cpp               ← Step 3: Execute and generate bbox_predic.txt
 ├── bbox_predic.txt             ← Output of predicted bounding boxes
 └── auto_test/
     └── cal_map.py              ← Step 4: Evaluate mAP using two files
@@ -40,8 +40,8 @@ This script modifies `config.yml` with parameters needed for the test (e.g., inp
 Compile and run the C++ executable:
 
 ```bash
-g++ nvof_test.cpp -o nvof_test `pkg-config --cflags --libs opencv`
-./nvof_test
+g++ deepstream_test_app.cpp -o deepstream_test_app `pkg-config --cflags --libs opencv`
+./deepstream_test_app
 ```
 
 This step will generate `bbox_predic.txt` containing bounding box predictions for the video frames.
